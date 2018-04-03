@@ -1,8 +1,33 @@
 header {
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0px;
+    margin-top: -8px;
+    margin-left: -8px;
     font-family: "Sanchez", serif;
     border: solid;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    padding-right: 10px;
 }
 
-#services-menu {
-    border: solid;
+#logo {
+    width: 265.5px;
+    height: 92px;
 }
+
+nav {
+    text-decoration-style: none;
+    width: 70%;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid; */
+}
+
+/* #services-menu {
+    border: solid;
+} */

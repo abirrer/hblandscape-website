@@ -35,7 +35,12 @@ export default class App extends Component {
                         </Link>
 
                         <nav>
-                            <Link to="/">Home</Link>
+                            <Link
+                                to="/"
+                                style={{ textDecorationStyle: "none" }}
+                            >
+                                Home
+                            </Link>
                             <Link to="/about-us">About Us</Link>
                             <Link
                                 to="/services"
