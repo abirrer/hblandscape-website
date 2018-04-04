@@ -46,7 +46,7 @@ export default class Register extends Component {
             .then(res => {
                 if (res.data.success) {
                     console.log("success with registration handleSubmit");
-                    location.replace("/");
+                    location.replace("/my-account/details");
                 } else {
                     console.log("error with registration handleSubmit");
                     this.setState({
@@ -59,6 +59,7 @@ export default class Register extends Component {
     render() {
         return (
             <div className="welcome-outer-box">
+                <h3>Register</h3>
                 <p className="error-message">{this.state.error}</p>
                 <form className="welcome-inner-box">
                     <input

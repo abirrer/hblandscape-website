@@ -32,7 +32,7 @@ export default class Login extends Component {
         axios.post("/my-account", { email, password }).then(res => {
             if (res.data.success) {
                 console.log("success with login handleSubmit");
-                location.replace("/");
+                location.replace("/my-account/details");
             } else {
                 console.log("error with login handleSubmit");
                 this.setState({
@@ -45,6 +45,7 @@ export default class Login extends Component {
     render() {
         return (
             <div className="welcome-outer-box">
+                <h3>Sign In</h3>
                 <p className="error-message">{this.state.error}</p>
                 <form className="welcome-inner-box">
                     <input
