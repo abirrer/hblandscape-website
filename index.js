@@ -74,8 +74,13 @@ app.post("/contact", (req, res) => {
     const newMessage = {
         from: `${first} ${last} <${email}>`,
         to: "hblandscapeco@gmail.com",
-        subject: `Request Quote from ${first} ${last}`,
-        text: `You've received a request for a quote. Name: ${first} ${last}, Contact: ${email} ${tel} (${preferredContact} is preferred), Project Type: ${projectType} in ${city}. Project Requirements: ${projectRequirements}, General Message: ${message}.`
+        subject: `Request for Landscape Services from ${first} ${last}`,
+        html: `<h1>You've received a request for a quote.</h1>
+    <div><p><b>Name: </b>${first} ${last}</div>
+    <div><p><b>Contact: </b>${tel} | ${email} (Please contact ${first} by ${preferredContact})</div>
+    <div><p><b>Project Type: </b>${projectType} in ${city}</div>
+    <div><p><b>Project Requirements: </b>${projectRequirements}</div>
+    <div><p><b>General Message: </b>${message}`
     };
 
     sendMail(newMessage)

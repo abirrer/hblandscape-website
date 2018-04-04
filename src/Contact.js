@@ -80,7 +80,7 @@ export default class Contact extends Component {
                         <input
                             type="tel"
                             name="tel"
-                            placeholder="Phone Number"
+                            placeholder="(123) 456-7890"
                             required
                         />
                     </div>
@@ -112,11 +112,11 @@ export default class Contact extends Component {
                     <div>
                         <input
                             type="radio"
-                            id="both"
+                            id="either"
                             name="preferredContact"
-                            value="both"
+                            value="either"
                         />
-                        <label htmlFor="both">Both are fine</label>
+                        <label htmlFor="either">Either is fine</label>
                     </div>
 
                     <h3>Details of Proposed Project Site</h3>
@@ -125,7 +125,7 @@ export default class Contact extends Component {
                             type="radio"
                             id="residential"
                             name="projectType"
-                            value="Residential"
+                            value="Residential Property"
                         />
                         <label htmlFor="residential">Residential</label>
                     </div>
@@ -134,7 +134,7 @@ export default class Contact extends Component {
                             type="radio"
                             id="commercial"
                             name="projectType"
-                            value="Commercial"
+                            value="Commercial Property"
                         />
                         <label htmlFor="commercial">Commercial</label>
                     </div>
@@ -156,7 +156,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="housePackage"
                             name="projectRequirements"
-                            value="housePackage"
+                            value="House Package"
                         />
                         <label htmlFor="housePackage">House Package</label>
                     </div>
@@ -165,7 +165,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="plants"
                             name="projectRequirements"
-                            value="plants"
+                            value="Plants"
                         />
                         <label htmlFor="plants">Plants</label>
                     </div>
@@ -174,7 +174,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="trees"
                             name="projectRequirements"
-                            value="trees"
+                            value="Mature Trees"
                         />
                         <label htmlFor="trees">Mature Trees</label>
                     </div>
@@ -183,7 +183,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="lawn"
                             name="projectRequirements"
-                            value="lawn"
+                            value="Lawn"
                         />
                         <label htmlFor="lawn">Lawn</label>
                     </div>
@@ -192,7 +192,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="mulch"
                             name="projectRequirements"
-                            value="mulch"
+                            value="Mulch"
                         />
                         <label htmlFor="mulch">Mulch</label>
                     </div>
@@ -201,7 +201,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="gardenArt"
                             name="projectRequirements"
-                            value="gardenArt"
+                            value="Garden Art"
                         />
                         <label htmlFor="gardenArt">Garden Art</label>
                     </div>
@@ -210,7 +210,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="pots"
                             name="projectRequirements"
-                            value="pots"
+                            value="Pots"
                         />
                         <label htmlFor="pots">Pots</label>
                     </div>
@@ -219,7 +219,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="irrigation"
                             name="projectRequirements"
-                            value="irrigation"
+                            value="Irrigation"
                         />
                         <label htmlFor="irrigation">Irrigation</label>
                     </div>
@@ -228,7 +228,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="waterFeatures"
                             name="projectRequirements"
-                            value="waterFeatures"
+                            value="Water Features"
                         />
                         <label htmlFor="waterFeatures">Water Feature(s)</label>
                     </div>
@@ -237,7 +237,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="paving"
                             name="projectRequirements"
-                            value="paving"
+                            value="Paving"
                         />
                         <label htmlFor="paving">Paving</label>
                     </div>
@@ -246,7 +246,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="decking"
                             name="projectRequirements"
-                            value="decking"
+                            value="Decking"
                         />
                         <label htmlFor="decking">Decking</label>
                     </div>
@@ -255,7 +255,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="maintenance"
                             name="projectRequirements"
-                            value="maintenance"
+                            value="Maintenance Program"
                         />
                         <label htmlFor="maintenance">Maintenance Program</label>
                     </div>
@@ -264,7 +264,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="all"
                             name="projectRequirements"
-                            value="all"
+                            value="All"
                         />
                         <label htmlFor="all">All</label>
                     </div>
@@ -273,7 +273,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="unsure"
                             name="projectRequirements"
-                            value="unsure"
+                            value="Unsure"
                         />
                         <label htmlFor="unsure">Unsure</label>
                     </div>
@@ -282,7 +282,7 @@ export default class Contact extends Component {
                             type="checkbox"
                             id="other"
                             name="projectRequirements"
-                            value="other"
+                            value="Other"
                         />
                         <label htmlFor="other">Other</label>
                     </div>
