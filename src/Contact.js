@@ -9,191 +9,297 @@ export default class Contact extends Component {
     sendEmail(e) {
         e.preventDefault();
 
-        let data = {};
+        const data = new FormData(e.target);
+
+        const emailData = {
+            first: data.get("first"),
+            last: data.get("last"),
+            tel: data.get("tel"),
+            email: data.get("email"),
+            preferredContact: data.get("preferredContact"),
+            projectType: data.get("projectType"),
+            city: data.get("city"),
+            projectRequirements: data.get("projectRequirements"),
+            message: data.get("message")
+        };
+
+        console.log("here is the form data: ", emailData);
+
+        if (!e.target.checkValidity()) {
+            console.log("not all required fields completed!");
+            return;
+        } else {
+            axios.post("/contact", emailData).then(res => {
+                if (res.data.success) {
+                    console.log("success with email send in Contact component");
+                } else {
+                    console.log("error with email send in Contact component");
+                }
+            });
+        }
     }
 
     render() {
+        // this[formFieldName] = e.target.value;
+
         return (
-            <div>
+            <div id="contactComponent">
                 <h2>Tell us about your landscape project and get a quote!</h2>
                 <p>
-                    Please include all relevant information and one of our staff
+                    Please include all relevant inmation and one of our staff
                     members will contact you as soon as possible and discuss
-                    your vision and provide you landscape quotes. Thanks for
-                    reaching out to HB Landscape Company for your landscape
-                    needs!
+                    your vision and provide you landscape quotes. <br />
+                    <br />Thanks reaching out to HB Landscape Company your
+                    landscape needs!
                 </p>
-                <form method="POST">
-                    <label htmlFor="first">First Name</label>
-                    <input type="text" name="first" required />
+                <form method="POST" onSubmit={this.sendEmail} noValidate>
+                    <h3>Basic Details</h3>
+                    <div>
+                        <label htmlFor="first">First Name: </label>
+                        <br />
+                        <input
+                            type="text"
+                            name="first"
+                            placeholder="First Name"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="last">Last Name: </label>
+                        <br />
+                        <input
+                            type="text"
+                            name="last"
+                            placeholder="Last Name"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="tel">Phone Number: </label>
+                        <br />
+                        <input
+                            type="tel"
+                            name="tel"
+                            placeholder="Phone Number"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="email">Email: </label>
+                        <br />
+                        <input type="email" name="email" placeholder="Email" />
+                    </div>
 
-                    <label htmlFor="last">Last Name</label>
-                    <input type="text" name="last" required />
+                    <h3>Preferred Method of Contact</h3>
+                    <div>
+                        <input
+                            type="radio"
+                            id="phone"
+                            name="preferredContact"
+                            value="phone"
+                        />
+                        <label htmlFor="phone">Telephone</label>
+                    </div>
+                    <div>
+                        <input
+                            type="radio"
+                            id="email"
+                            name="preferredContact"
+                            value="email"
+                        />
+                        <label htmlFor="email">Email</label>
+                    </div>
+                    <div>
+                        <input
+                            type="radio"
+                            id="both"
+                            name="preferredContact"
+                            value="both"
+                        />
+                        <label htmlFor="both">Both are fine</label>
+                    </div>
 
-                    <label htmlFor="tel">Phone Number</label>
-                    <input type="tel" name="tel" required />
+                    <h3>Details of Proposed Project Site</h3>
+                    <div>
+                        <input
+                            type="radio"
+                            id="residential"
+                            name="projectType"
+                            value="Residential"
+                        />
+                        <label htmlFor="residential">Residential</label>
+                    </div>
+                    <div>
+                        <input
+                            type="radio"
+                            id="commercial"
+                            name="projectType"
+                            value="Commercial"
+                        />
+                        <label htmlFor="commercial">Commercial</label>
+                    </div>
+                    <br />
+                    <div>
+                        <label htmlFor="city">Site Location: </label>
+                        <br />
+                        <input
+                            type="text"
+                            name="city"
+                            id="city"
+                            placeholder="City"
+                        />
+                    </div>
 
-                    <label htmlFor="email">Email</label>
-                    <input type="email" name="email" />
+                    <h3>Landscape Project Requirements</h3>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="housePackage"
+                            name="projectRequirements"
+                            value="housePackage"
+                        />
+                        <label htmlFor="housePackage">House Package</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="plants"
+                            name="projectRequirements"
+                            value="plants"
+                        />
+                        <label htmlFor="plants">Plants</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="trees"
+                            name="projectRequirements"
+                            value="trees"
+                        />
+                        <label htmlFor="trees">Mature Trees</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="lawn"
+                            name="projectRequirements"
+                            value="lawn"
+                        />
+                        <label htmlFor="lawn">Lawn</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="mulch"
+                            name="projectRequirements"
+                            value="mulch"
+                        />
+                        <label htmlFor="mulch">Mulch</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="gardenArt"
+                            name="projectRequirements"
+                            value="gardenArt"
+                        />
+                        <label htmlFor="gardenArt">Garden Art</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="pots"
+                            name="projectRequirements"
+                            value="pots"
+                        />
+                        <label htmlFor="pots">Pots</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="irrigation"
+                            name="projectRequirements"
+                            value="irrigation"
+                        />
+                        <label htmlFor="irrigation">Irrigation</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="waterFeatures"
+                            name="projectRequirements"
+                            value="waterFeatures"
+                        />
+                        <label htmlFor="waterFeatures">Water Feature(s)</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="paving"
+                            name="projectRequirements"
+                            value="paving"
+                        />
+                        <label htmlFor="paving">Paving</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="decking"
+                            name="projectRequirements"
+                            value="decking"
+                        />
+                        <label htmlFor="decking">Decking</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="maintenance"
+                            name="projectRequirements"
+                            value="maintenance"
+                        />
+                        <label htmlFor="maintenance">Maintenance Program</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="all"
+                            name="projectRequirements"
+                            value="all"
+                        />
+                        <label htmlFor="all">All</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="unsure"
+                            name="projectRequirements"
+                            value="unsure"
+                        />
+                        <label htmlFor="unsure">Unsure</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="other"
+                            name="projectRequirements"
+                            value="other"
+                        />
+                        <label htmlFor="other">Other</label>
+                    </div>
 
-                    <label htmlFor="preferredContact">
-                        Preferred Method of Contact
-                    </label>
-                    <input type="radio" name="preferredContact" value="phone">
-                        Telephone
-                    </input>
-                    <br />
-                    <input type="radio" name="preferredContact" value="email">
-                        Email
-                    </input>
-                    <br />
-                    <input type="radio" name="preferedContact" value="either">
-                        Both are fine
-                    </input>
+                    <h3>Summary of Work Request</h3>
+                    <div>
+                        <textarea
+                            name="message"
+                            id="message"
+                            rows="6"
+                            placeholder="Add any additional information (e.g. size of area, requirement details, budget, etc.)"
+                        />
+                    </div>
 
-                    <label htmlFor="city">Site Location</label>
-                    <input type="text" name="city" placeholder="City" />
-
-                    <label htmlFor="projectType">Site Type</label>
-                    <input
-                        type="checkbox"
-                        name="projectType"
-                        value="Residential"
-                    >
-                        Residential
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectType"
-                        value="Commercial"
-                    >
-                        Commercial
-                    </input>
-
-                    <label htmlFor="projectRequirements">
-                        Landscape Requirements
-                    </label>
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="House"
-                    >
-                        House Package
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Plants"
-                    >
-                        Plants
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Trees"
-                    >
-                        Mature Trees
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Lawn"
-                    >
-                        Lawn
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Mulch"
-                    >
-                        Mulch
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Garden Art"
-                    >
-                        Garden Art
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Pots"
-                    >
-                        Pots
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Irrigation"
-                    >
-                        Irrigation
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Water Features"
-                    >
-                        Water Feature(s)
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Paving"
-                    >
-                        Paving
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Decking"
-                    >
-                        Decking
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Maintenance"
-                    >
-                        Maintenance Program
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="All"
-                    >
-                        All
-                    </input>
-                    <br />
-                    <input
-                        type="checkbox"
-                        name="projectRequirements"
-                        value="Unsure"
-                    >
-                        Unsure
-                    </input>
-
-                    <label htmlFor="message">Summary of Work Request</label>
-                    <textarea name="message" rows="5" />
-
-                    <input
-                        type="submit"
-                        value="Submit"
-                        onClick={this.sendEmail}
-                    />
+                    <div>
+                        <input type="submit" value="Submit" />
+                    </div>
                 </form>
             </div>
         );

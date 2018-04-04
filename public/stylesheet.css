@@ -5,22 +5,20 @@ header {
     top: 0px;
     margin-top: -8px;
     margin-left: -8px;
-    font-family: "Sanchez", serif;
-    border: solid;
+    font-family: "Open Sans", sans-serif;
     display: flex;
     justify-content: space-between;
     z-index: 10;
     padding-right: 10px;
+    background-color: white;
 }
 
 #logo {
-    width: 265.5px;
-    height: 92px;
 }
 
 nav {
     text-decoration-style: none;
-    width: 70%;
+    width: 60%;
     font-size: 16px;
     display: flex;
     justify-content: space-between;
@@ -28,6 +26,72 @@ nav {
     /* border: solid; */
 }
 
-/* #services-menu {
+#services-menu {
     border: solid;
-} */
+    position: absolute;
+    top: 100px;
+    left: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for Contact Us Sheet */
+
+#contactComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+#contactComponent p {
+    width: 60%;
+    text-align: center;
+}
+
+form {
+    font-family: "Open Sans", sans-serif;
+    background: #82949d;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+form textarea {
+    width: 80%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+form input[type="text"] {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+form input[type="email"] {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+form input[type="tel"] {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+form input[type="submit"] {
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}

@@ -31,7 +31,11 @@ export default class App extends Component {
                 <div>
                     <header>
                         <Link to="/">
-                            <img id="logo" src="/images/logo.png" alt="logo" />
+                            <img
+                                id="logo"
+                                src="/images/logov2.png"
+                                alt="logo"
+                            />
                         </Link>
 
                         <nav>
