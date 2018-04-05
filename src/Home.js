@@ -29,11 +29,11 @@ export default class Home extends Component {
                     backgroundImage: urls[i]
                 });
 
-                if (i > urls.length) {
+                i++;
+
+                if (i == urls.length) {
                     i = 0;
                 }
-
-                i++;
 
                 changeBackground();
             }, 3000);
