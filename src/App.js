@@ -33,7 +33,7 @@ export default class App extends Component {
                         <Link to="/">
                             <img
                                 id="logo"
-                                src="/images/logov2.png"
+                                src="/images/logo/logov2.png"
                                 alt="logo"
                             />
                         </Link>
