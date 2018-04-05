@@ -30,7 +30,7 @@ export default function About() {
             <div id="contact__outer-box">
                 <div>
                     <iframe
-                        width="400"
+                        width="450"
                         height="300"
                         frameBorder="0"
                         style={{ border: "0" }}

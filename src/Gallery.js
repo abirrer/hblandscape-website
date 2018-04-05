@@ -30,112 +30,112 @@ export default class Gallery extends Component {
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/1.jpg"
+                            src="./images/gardengallery/1.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/2.jpg"
+                            src="./images/gardengallery/2.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/3.jpg"
+                            src="./images/gardengallery/3.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/4.jpg"
+                            src="./images/gardengallery/4.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/5.jpg"
+                            src="./images/gardengallery/5.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/6.jpg"
+                            src="./images/gardengallery/6.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/7.jpg"
+                            src="./images/gardengallery/7.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/8.jpg"
+                            src="./images/gardengallery/8.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/9.jpg"
+                            src="./images/gardengallery/9.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/10.jpg"
+                            src="./images/gardengallery/10.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/11.jpg"
+                            src="./images/gardengallery/11.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/residentialgardens/12.jpg"
+                            src="./images/gardengallery/12.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/commercialgardens/13.jpg"
+                            src="./images/gardengallery/13.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/commercialgardens/14.jpg"
+                            src="./images/gardengallery/14.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/commercialgardens/15.jpg"
+                            src="./images/gardengallery/15.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
                     <div className="image-outer-box">
                         <img
                             className="image"
-                            src="./images/commercialgardens/16.jpg"
+                            src="./images/gardengallery/16.jpg"
                             onClick={this.togglePopup}
                         />
                     </div>
