@@ -35,6 +35,20 @@ nav {
     flex-direction: column;
 }
 
+footer {
+    width: 100%;
+    height: auto;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    background-color: white;
+    border-top: solid #f6f8f9 1px;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
 /* Styling for Contact Us Sheet */
 
 #contactComponent {
@@ -157,4 +171,48 @@ form input[type="submit"] {
     object-fit: cover;
     object-position: center;
     margin: 10px;
+}
+
+/* Styling for Testimonials Page */
+
+#testimonials {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+}
+
+#testimonials__outer-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 15px;
+    background: #ab7162;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+#testimonials__outer-box img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#testimonials__inner-box {
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.box-border {
+    /* border: solid; */
+    /* background: #f8d4cb; */
+}
+
+#quote {
+    height: auto;
+    width: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: right;
 }
