@@ -216,3 +216,42 @@ form input[type="submit"] {
     margin-left: 10px;
     text-align: right;
 }
+
+/* Styling for Services Page */
+
+#services {
+    font-family: "Open Sans", sans-serif;
+}
+
+#services-flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: solid; */
+    justify-content: center;
+}
+
+.services__outer-box {
+    display: flex;
+    margin: 20px;
+    /* border: solid; */
+    width: 45%;
+}
+
+.services__outer-box img {
+    height: 90px;
+    width: 90px;
+    border-right: solid #405e6c 3px;
+}
+
+.services__inner-box {
+    width: 80%;
+    height: auto;
+    margin-left: 15px;
+    /* border: solid; */
+    margin-top: -24px;
+}
+
+.services__inner-box p {
+    margin-top: -10px;
+    /* font-size: 16px; */
+}
