@@ -238,8 +238,8 @@ form input[type="submit"] {
 }
 
 .services__outer-box img {
-    height: 90px;
-    width: 90px;
+    height: 95px;
+    width: 95px;
     border-right: solid #405e6c 3px;
 }
 
@@ -254,4 +254,60 @@ form input[type="submit"] {
 .services__inner-box p {
     margin-top: -10px;
     /* font-size: 16px; */
+}
+
+/* Styling for About Us Page */
+
+#about {
+    font-family: "Open Sans", sans-serif;
+}
+
+#about h1 {
+    text-align: center;
+}
+
+#about__info-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 60px;
+}
+
+#about__info-box p {
+    width: 50%;
+    /* border: solid; */
+    margin-top: -25px;
+}
+
+#about__info-box img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#contact__outer-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* border: solid; */
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+#contact__info-box {
+    width: 50%;
+    margin-top: -25px;
+}
+
+#about button {
+    background-color: #405e6c;
+    color: #f6f8f9;
+    font-size: 16px;
+    padding: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
 }
