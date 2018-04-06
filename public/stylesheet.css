@@ -202,7 +202,8 @@ form input[type="submit"] {
     justify-content: space-around;
     align-items: flex-start;
     padding: 15px;
-    background: #ab7162;
+    /* background: #ab7162; */
+    /* border: solid #ab7162 2px; */
     border-radius: 10px;
     margin-bottom: 40px;
 }
@@ -371,4 +372,80 @@ form input[type="submit"] {
     background: rgba(0, 0, 0, 0.4);
     padding: 10px;
     border-radius: 10px;
+}
+
+/* Styling for Account Login/Registration Pages */
+
+#account {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__outer-box {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__inner-box {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__inner-box input {
+    width: 60%;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: -8px;
+}
+
+.login__inner-box button {
+    width: 25%;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Styling for Account Detail Pages */
+
+#invoices {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+#payment-button {
+    width: 40%;
+}
+
+#payment-button img {
+    cursor: pointer;
+}
+
+#account-details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 190px;
+}
+
+#line {
+    width: 100%;
+    border: solid 1px #f6f8f9;
 }

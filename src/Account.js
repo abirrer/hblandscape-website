@@ -8,10 +8,10 @@ import AccountDetails from "./AccountDetails.js";
 
 export default function Account() {
     return (
-        <div id="account">
+        <div>
             <BrowserRouter>
-                <div>
-                    <h1>You are in your account section.</h1>
+                <div id="account">
+                    <h1>My Account</h1>
                     <Route exact path="/my-account" component={Login} />
                     <Route path="/my-account/register" component={Register} />
                     <Route

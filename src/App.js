@@ -111,7 +111,7 @@ export default class App extends Component {
                             component={Testimonials}
                         />
                         <Route exact path="/contact" component={Contact} />
-                        <Route exact path="/my-account" component={Account} />
+                        <Route path="/my-account" component={Account} />
                     </div>
                     <footer>
                         Huntington Beach Landscape © 2018 | LIC# C27-526009

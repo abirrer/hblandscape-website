@@ -44,10 +44,9 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div className="welcome-outer-box">
-                <h3>Sign In</h3>
-                <p className="error-message">{this.state.error}</p>
-                <form className="welcome-inner-box">
+            <div className="login__outer-box">
+                <form className="login__inner-box">
+                    <p>Log in to access your account details.</p>
                     <input
                         onChange={this.handleChange}
                         name="email"
@@ -60,6 +59,9 @@ export default class Login extends Component {
                         type="password"
                         placeholder="Password"
                     />
+                    {this.state.error && (
+                        <p className="error-message">{this.state.error}</p>
+                    )}
                     <button onClick={this.handleSubmit}>Login</button>
                 </form>
                 <p>
