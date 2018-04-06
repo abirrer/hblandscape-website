@@ -109,6 +109,7 @@ app.post("/contact", (req, res) => {
     sendMail(newMessage)
         .then(() => {
             console.log("sending email succeeded!");
+            res.json({ success: true });
             // res.redirect('/example#contact-success');
         })
         .catch(error => {

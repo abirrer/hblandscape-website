@@ -4,6 +4,12 @@ import axios from "./axios";
 export default class Contact extends Component {
     constructor() {
         super();
+
+        this.state = {
+            thankYouMessage: ""
+        };
+
+        this.sendEmail = this.sendEmail.bind(this);
     }
 
     sendEmail(e) {
@@ -32,6 +38,11 @@ export default class Contact extends Component {
             axios.post("/contact", emailData).then(res => {
                 if (res.data.success) {
                     console.log("success with email send in Contact component");
+                    document.getElementById("quote-form").reset();
+                    this.setState({
+                        thankYouMessage:
+                            "Your details have been submitted, thanks!"
+                    });
                 } else {
                     console.log("error with email send in Contact component");
                 }
@@ -45,13 +56,16 @@ export default class Contact extends Component {
         return (
             <div id="contactComponent">
                 <h1>Submit details for a free quote!</h1>
-                <form method="POST" onSubmit={this.sendEmail} noValidate>
+                <form
+                    id="quote-form"
+                    method="POST"
+                    onSubmit={this.sendEmail}
+                    noValidate
+                >
                     <p>
                         Please include all relevant information and one of our
                         staff members will contact you as soon as possible to
-                        discuss your vision and provide you a quote. <br />
-                        <br />Thanks reaching out to HB Landscape Company your
-                        landscape needs!
+                        discuss your vision and provide you a quote.
                     </p>
                     <h3>Basic Details</h3>
                     <div>
@@ -268,6 +282,12 @@ export default class Contact extends Component {
                             placeholder="Add any additional information (e.g. size of area, requirement details, budget, etc.)"
                         />
                     </div>
+
+                    {this.state.thankYouMessage && (
+                        <p className="success-message">
+                            {this.state.thankYouMessage}
+                        </p>
+                    )}
 
                     <div>
                         <input type="submit" value="Submit" />

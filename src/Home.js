@@ -10,8 +10,6 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-        console.log("inside component did mount");
-
         const urls = [
             "/images/gardengallery/1.jpg",
             "/images/gardengallery/6.jpg",
@@ -22,9 +20,7 @@ export default class Home extends Component {
         let i = 0;
 
         const changeBackground = url => {
-            console.log("inside changeBackground function");
             setTimeout(() => {
-                console.log("inside setTimeout function");
                 this.setState({
                     backgroundImage: urls[i]
                 });

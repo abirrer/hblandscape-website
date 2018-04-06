@@ -122,6 +122,11 @@ form input[type="submit"] {
     cursor: pointer;
 }
 
+.success-message {
+    color: green;
+    font-style: italic;
+}
+
 /* Styling for Gallery Sheet */
 #gallery__outer-div {
     font-family: "Open Sans", sans-serif;
@@ -442,7 +447,7 @@ form input[type="submit"] {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-bottom: 190px;
+    padding-bottom: 190px;success-message
 }
 
 #line {
