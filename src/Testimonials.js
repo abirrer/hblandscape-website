@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default function Testimonials() {
     return (
         <div id="testimonials">
-            <h1>Customer Projects and Testimonials.</h1>
+            <h1>Customer Projects and Testimonials</h1>
             <div id="testimonials__outer-box">
                 <img src="./images/testimonials/1.jpg" className="box-border" />
 

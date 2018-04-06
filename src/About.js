@@ -63,9 +63,15 @@ export default function About() {
                             </p>
                         </div>
 
-                        <button>
-                            <Link to="/contact">Get In Touch</Link>
-                        </button>
+                        <Link
+                            to="/contact"
+                            style={{
+                                textDecoration: "none",
+                                color: "white"
+                            }}
+                        >
+                            <button>Get In Touch</button>
+                        </Link>
                     </div>
                 </div>
             </div>

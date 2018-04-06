@@ -2,38 +2,52 @@ header {
     width: 100%;
     height: auto;
     position: sticky;
-    top: 0px;
+    top: -90px;
     margin-top: -8px;
     margin-left: -8px;
     font-family: "Open Sans", sans-serif;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     z-index: 10;
     padding-right: 20px;
     background-color: white;
-}
-
-#logo {
+    box-shadow: 0px 15px 10px -18px #111;
 }
 
 nav {
+    width: 100%;
     text-decoration-style: none;
-    width: 60%;
     font-size: 16px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     /* border: solid; */
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-#services-menu {
+a.link {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+a.link:hover {
+    background-color: #90b19f;
+    transition: background-color 0.25s ease;
+}
+
+/* #services-menu {
     border: solid;
     position: absolute;
     top: 100px;
     left: 750px;
     display: flex;
     flex-direction: column;
-}
+} */
 
 footer {
     width: 100%;
@@ -59,8 +73,6 @@ footer {
 }
 
 #contactComponent p {
-    width: 60%;
-    text-align: center;
 }
 
 form {
@@ -71,11 +83,11 @@ form {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 45%;
 }
 
 form textarea {
-    width: 80%;
+    width: 90%;
     border-radius: 5px;
     padding: 10px;
     font-size: 15px;
@@ -113,6 +125,7 @@ form input[type="submit"] {
 /* Styling for Gallery Sheet */
 #gallery__outer-div {
     font-family: "Open Sans", sans-serif;
+    text-align: center;
 }
 
 #gallery__inner-div {
@@ -161,8 +174,9 @@ form input[type="submit"] {
     font-family: "Open Sans", sans-serif;
     position: relative;
     top: -270px;
-    right: -879px;
+    right: -875px;
     cursor: pointer;
+    color: #82949d;
 }
 
 #image-popup__inner-box img {
@@ -177,7 +191,10 @@ form input[type="submit"] {
 
 #testimonials {
     font-family: "Open Sans", sans-serif;
-    font-size: 13px;
+}
+
+#testimonials h1 {
+    text-align: center;
 }
 
 #testimonials__outer-box {
@@ -202,6 +219,7 @@ form input[type="submit"] {
     height: auto;
     margin-right: 10px;
     margin-left: 20px;
+    font-size: 13px;
 }
 
 .box-border {
@@ -215,12 +233,17 @@ form input[type="submit"] {
     margin-right: 10px;
     margin-left: 10px;
     text-align: right;
+    font-size: 13px;
 }
 
 /* Styling for Services Page */
 
 #services {
     font-family: "Open Sans", sans-serif;
+}
+
+#services h1 {
+    text-align: center;
 }
 
 #services-flex-box {

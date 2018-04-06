@@ -40,21 +40,22 @@ export default function Services() {
                 <div className="services__outer-box">
                     <img src="./images/icons/irrigation.png" />
                     <div className="services__inner-box">
-                        <h3>Irrigation Systems & Water Features</h3>
+                        <h3>Irrigation Systems</h3>
                         <p>
-                            We are experienced in installing automated
-                            irrigation systems as well as building decorative
-                            water features.
+                            We are experienced in installing various types of
+                            automated irrigation systems like drip irrigation or
+                            sprinklers.
                         </p>
                     </div>
                 </div>
                 <div className="services__outer-box">
                     <img src="./images/icons/landscapedesign.png" />
                     <div className="services__inner-box">
-                        <h3>Garden Art</h3>
+                        <h3>Decorative Garden Features</h3>
                         <p>
-                            Handcrafted features add beautiful, distinctive and
-                            durable value to your property.
+                            Handcrafted features like stone walls or water
+                            features add beautiful and durable value to your
+                            property.
                         </p>
                     </div>
                 </div>

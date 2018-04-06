@@ -44,15 +44,15 @@ export default class Contact extends Component {
 
         return (
             <div id="contactComponent">
-                <h2>Tell us about your landscape project and get a quote!</h2>
-                <p>
-                    Please include all relevant inmation and one of our staff
-                    members will contact you as soon as possible and discuss
-                    your vision and provide you landscape quotes. <br />
-                    <br />Thanks reaching out to HB Landscape Company your
-                    landscape needs!
-                </p>
+                <h1>Submit details for a free quote!</h1>
                 <form method="POST" onSubmit={this.sendEmail} noValidate>
+                    <p>
+                        Please include all relevant information and one of our
+                        staff members will contact you as soon as possible to
+                        discuss your vision and provide you a quote. <br />
+                        <br />Thanks reaching out to HB Landscape Company your
+                        landscape needs!
+                    </p>
                     <h3>Basic Details</h3>
                     <div>
                         <label htmlFor="first">First Name: </label>
@@ -154,101 +154,73 @@ export default class Contact extends Component {
                     <div>
                         <input
                             type="checkbox"
-                            id="housePackage"
+                            id="gardening"
                             name="projectRequirements"
-                            value="House Package"
+                            value="Gardening"
                         />
-                        <label htmlFor="housePackage">House Package</label>
+                        <label htmlFor="gardening">Gardening</label>
                     </div>
                     <div>
                         <input
                             type="checkbox"
-                            id="plants"
+                            id="landscapedesign"
                             name="projectRequirements"
-                            value="Plants"
+                            value="Landscape Design"
                         />
-                        <label htmlFor="plants">Plants</label>
-                    </div>
-                    <div>
-                        <input
-                            type="checkbox"
-                            id="trees"
-                            name="projectRequirements"
-                            value="Mature Trees"
-                        />
-                        <label htmlFor="trees">Mature Trees</label>
-                    </div>
-                    <div>
-                        <input
-                            type="checkbox"
-                            id="lawn"
-                            name="projectRequirements"
-                            value="Lawn"
-                        />
-                        <label htmlFor="lawn">Lawn</label>
-                    </div>
-                    <div>
-                        <input
-                            type="checkbox"
-                            id="mulch"
-                            name="projectRequirements"
-                            value="Mulch"
-                        />
-                        <label htmlFor="mulch">Mulch</label>
-                    </div>
-                    <div>
-                        <input
-                            type="checkbox"
-                            id="gardenArt"
-                            name="projectRequirements"
-                            value="Garden Art"
-                        />
-                        <label htmlFor="gardenArt">Garden Art</label>
-                    </div>
-                    <div>
-                        <input
-                            type="checkbox"
-                            id="pots"
-                            name="projectRequirements"
-                            value="Pots"
-                        />
-                        <label htmlFor="pots">Pots</label>
+                        <label htmlFor="landscapedesign">
+                            Landscape Design
+                        </label>
                     </div>
                     <div>
                         <input
                             type="checkbox"
                             id="irrigation"
                             name="projectRequirements"
-                            value="Irrigation"
+                            value="Irrigation Systems"
                         />
-                        <label htmlFor="irrigation">Irrigation</label>
+                        <label htmlFor="irrigation">Irrigation Systems</label>
                     </div>
                     <div>
                         <input
                             type="checkbox"
-                            id="waterFeatures"
+                            id="decorative"
                             name="projectRequirements"
-                            value="Water Features"
+                            value="Decorative Garden Features"
                         />
-                        <label htmlFor="waterFeatures">Water Feature(s)</label>
+                        <label htmlFor="decorative">
+                            Decorative Garden Features
+                        </label>
                     </div>
                     <div>
                         <input
                             type="checkbox"
-                            id="paving"
+                            id="lawn"
                             name="projectRequirements"
-                            value="Paving"
+                            value="Lawn Care or Lawn Alternatives"
                         />
-                        <label htmlFor="paving">Paving</label>
+                        <label htmlFor="lawn">
+                            Lawn Care or Lawn Alternatives
+                        </label>
                     </div>
                     <div>
                         <input
                             type="checkbox"
-                            id="decking"
+                            id="patio"
                             name="projectRequirements"
-                            value="Decking"
+                            value="Patio & Outdoor Spaces"
                         />
-                        <label htmlFor="decking">Decking</label>
+                        <label htmlFor="patio">Patio & Outdoor Spaces</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="planthealthcare"
+                            name="projectRequirements"
+                            value="Plant Healthcare"
+                        />
+                        <label htmlFor="planthealthcare">
+                            Plant Healthcare
+                        </label>
                     </div>
                     <div>
                         <input

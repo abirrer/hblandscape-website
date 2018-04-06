@@ -22,7 +22,7 @@ export default class App extends Component {
                         <Link to="/">
                             <img
                                 id="logo"
-                                src="/images/logo/logov2.png"
+                                src="/images/logo/logogreensmall.png"
                                 alt="logo"
                             />
                         </Link>
@@ -30,22 +30,74 @@ export default class App extends Component {
                         <nav>
                             <Link
                                 to="/"
-                                style={{ textDecorationStyle: "none" }}
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black"
+                                }}
+                                className="link"
                             >
                                 Home
                             </Link>
-                            <Link to="/about-us">About Us</Link>
+                            <Link
+                                to="/about-us"
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black"
+                                }}
+                                className="link"
+                            >
+                                About Us
+                            </Link>
                             <Link
                                 to="/services"
-                                onMouseOver={this.toggleServices}
-                                onMouseOut={this.toggleServices}
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black"
+                                }}
+                                className="link"
                             >
                                 Services
                             </Link>
-                            <Link to="/gallery">Gallery</Link>
-                            <Link to="/testimonials">Testimonials</Link>
-                            <Link to="/contact">Contact Us</Link>
-                            <Link to="/my-account">My Account</Link>
+                            <Link
+                                to="/gallery"
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black"
+                                }}
+                                className="link"
+                            >
+                                Gallery
+                            </Link>
+                            <Link
+                                to="/testimonials"
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black"
+                                }}
+                                className="link"
+                            >
+                                Testimonials
+                            </Link>
+                            <Link
+                                to="/contact"
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black"
+                                }}
+                                className="link"
+                            >
+                                Contact Us
+                            </Link>
+                            <Link
+                                to="/my-account"
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black"
+                                }}
+                                className="link"
+                            >
+                                My Account
+                            </Link>
                         </nav>
                     </header>
                     <div className="body">
