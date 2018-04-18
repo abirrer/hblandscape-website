@@ -8,6 +8,10 @@ const csrf = require("csurf");
 const nodemailer = require("nodemailer");
 const { hashPassword, checkPassword } = require("./hash");
 const { addNewUser, getPassword } = require("./db");
+
+const server = require("http").Server(app);
+const io = require("socket.io")(server); //need to change this to be live on the internet.
+io.origins(["localhost:8080", "hblandscape.herokuapp.com:*"]);
 if (!process.env.DATABASE_URL) {
     var secrets = require("./secrets.json");
 }
