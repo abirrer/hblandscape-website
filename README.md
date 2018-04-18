@@ -6,7 +6,7 @@
 
 ### Website
 
-<p>https://abirrer.github.io/hblandscape-website/</p>
+<p>https://hblandscape.herokuapp.com/</p>
 
 ### Technologies Used
 
