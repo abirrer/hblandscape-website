@@ -40,6 +40,24 @@ app.use(express.static("public"));
 
 app.use(compression());
 
+const cookieSessionMiddleware = cookieSession({
+    secret: process.env.SESSION_SECRET || require("./secrets").secret,
+    maxAge: 1000 * 60 * 60 * 24 * 14 //this means 14 days of complete inactivity
+});
+
+app.use(cookieSessionMiddleware);
+
+app.use(csrf());
+
+app.use(function(req, res, next) {
+    res.cookie("mytoken", req.csrfToken());
+    next();
+});
+
+app.use(cookieParser());
+
+app.use(compression());
+
 if (process.env.NODE_ENV != "production") {
     app.use(
         "/bundle.js",
@@ -58,24 +76,6 @@ app.use(
 );
 
 app.use(bodyParser.json());
-
-const cookieSessionMiddleware = cookieSession({
-    secret: process.env.SESSION_SECRET || require("./secrets").secret,
-    maxAge: 1000 * 60 * 60 * 24 * 14 //this means 14 days of complete inactivity
-});
-
-app.use(cookieSessionMiddleware);
-
-app.use(csrf());
-
-app.use(function(req, res, next) {
-    res.cookie("mytoken", req.csrfToken());
-    next();
-});
-
-app.use(cookieParser());
-
-app.use(compression());
 
 //ROUTES
 
