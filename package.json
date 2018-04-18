@@ -16,11 +16,8 @@
         "node": "8.9.4"
     },
     "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/abirrer/hblandscape-website/issues"
+    "license": "ISC"
     },
-    "homepage": "https://github.com/abirrer/hblandscape-website#readme",
     "dependencies": {
         "axios": "^0.18.0",
         "babel": "^6.23.0",
