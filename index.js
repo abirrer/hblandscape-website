@@ -6,9 +6,11 @@ const cookieParser = require("cookie-parser");
 const cookieSession = require("cookie-session");
 const csrf = require("csurf");
 const nodemailer = require("nodemailer");
-const secrets = require("./secrets.json");
 const { hashPassword, checkPassword } = require("./hash");
 const { addNewUser, getPassword } = require("./db");
+if (!process.env.DATABASE_URL) {
+    var secrets = require("./secrets.json");
+}
 
 //Nodemailer setup
 
