@@ -9,34 +9,34 @@ export default class Home extends Component {
         };
     }
 
-    // componentDidMount() {
-    //     const urls = [
-    //         "/images/gardengallery/1.jpg",
-    //         "/images/gardengallery/6.jpg",
-    //         "/images/gardengallery/13.jpg",
-    //         "/images/gardengallery/16.jpg"
-    //     ];
-    //
-    //     let i = 0;
-    //
-    //     const changeBackground = url => {
-    //         let timer = setTimeout(() => {
-    //             this.setState({
-    //                 backgroundImage: urls[i]
-    //             });
-    //
-    //             i++;
-    //
-    //             if (i == urls.length) {
-    //                 i = 0;
-    //             }
-    //
-    //             changeBackground();
-    //         }, 3000);
-    //     };
-    //     changeBackground();
-    // }
-    //
+    componentDidMount() {
+        const urls = [
+            "/images/gardengallery/1.jpg",
+            "/images/gardengallery/6.jpg",
+            "/images/gardengallery/13.jpg",
+            "/images/gardengallery/16.jpg"
+        ];
+
+        let i = 0;
+
+        const changeBackground = url => {
+            let timer = setTimeout(() => {
+                this.setState({
+                    backgroundImage: urls[i]
+                });
+
+                i++;
+
+                if (i == urls.length) {
+                    i = 0;
+                }
+
+                changeBackground();
+            }, 3000);
+        };
+        changeBackground();
+    }
+
     // componentWillUnmount() {
     //     clearTimeout(timer);
     // }
