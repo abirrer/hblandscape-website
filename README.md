@@ -26,7 +26,7 @@
 
 <p>There is a Gallery section where users can browse photos of completed landscape projects. Users can click on a photo to reveal a pop-up modal to view the image in greater detail.</p>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/12107707/38874230-e9cc120e-4257-11e8-8c04-3996add7f885.gif"  width="800"/>
+<img src="https://user-images.githubusercontent.com/12107707/38874230-e9cc120e-4257-11e8-8c04-3996add7f885.gif"  width="900"/>
 </p>
 
 <p>The Contact Us page features a simple form for potential clients to send an email directly to my father's Gmail account. Since my dad operates a completely offline business, this form will allow him to get client emails directly to his phone where he can then call them immediately and have initial information to start the conversation.</p>
