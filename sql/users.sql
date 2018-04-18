@@ -7,4 +7,4 @@ CREATE TABLE users (
     email VARCHAR(100) NOT NULL UNIQUE,
     hashed_password VARCHAR(100) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)
+);
